@@ -1,26 +1,31 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
+    "outDir": "dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
-    "stripInternal": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
+
+    "strict": true,
+
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+
+    "incremental": true,
+
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "useUnknownInCatchVariables": false,
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "forceConsistentCasingInFileNames": true,
+
+    "jsx": "react-jsx",
+
+    "composite": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "tests"]
 }
