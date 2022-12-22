@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
+import styled from './styled';
 
 const primary = '#0658c2',
   darkGray = '#666',
