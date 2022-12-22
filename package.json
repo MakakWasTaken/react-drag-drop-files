@@ -17,7 +17,7 @@
     "lint:check": "eslint --ext .ts --ext .tsx .",
     "lint:fix": "eslint --fix --ext .ts --ext .tsx .",
     "test": "jest",
-    "prepack": "yarn run build"
+    "prepare": "yarn run build"
   },
   "eslintConfig": {
     "extends": [
@@ -99,6 +99,6 @@
     "yarn": "1.22.11"
   },
   "files": [
-    "dist"
+    "dist/**/*"
   ]
 }
