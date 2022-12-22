@@ -21,6 +21,7 @@ type Props = {
   minSize?: number;
   fileOrFiles?: Array<File> | File | null;
   disabled?: boolean | false;
+  disableClicking?: boolean | false;
   label?: string | undefined;
   multiple?: boolean | false;
   onSizeError?: (arg0: string) => void;
@@ -118,6 +119,7 @@ const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
     onSelect,
     onDrop,
     disabled,
+    disableClicking,
     label,
     multiple,
     onDraggingStateChange,
@@ -178,7 +180,7 @@ const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
   const handleClick = (ev: any) => {
     ev.stopPropagation();
     // eslint-disable-next-line no-param-reassign
-    if (inputRef && inputRef.current) {
+    if (inputRef && inputRef.current && !disableClicking) {
       inputRef.current.click();
     }
   };
