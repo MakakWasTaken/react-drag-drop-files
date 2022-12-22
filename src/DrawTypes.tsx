@@ -1,4 +1,5 @@
-import React from 'react';
+import { FC } from 'react';
+
 type Props = {
   types?: Array<string>;
   minSize?: number;
@@ -11,11 +12,7 @@ type Props = {
  *
  * @internal
  */
-export default function DrawTypes({
-  types,
-  minSize,
-  maxSize
-}: Props): null | JSX.Element {
+export const DrawTypes: FC<Props> = ({ types, minSize, maxSize }) => {
   if (types) {
     const stringTypes = types.toString();
     let size = '';
@@ -28,4 +25,6 @@ export default function DrawTypes({
     );
   }
   return null;
-}
+};
+
+export default DrawTypes;
