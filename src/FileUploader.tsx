@@ -103,7 +103,7 @@ const drawDescription = (
   }
  * @returns JSX Element
  */
-const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
+export const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
   const {
     name,
     hoverTitle,
